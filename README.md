@@ -27,7 +27,7 @@ binding!!.viewmodel!!.changeState.observe(this, Observer {
             }
         })
 //changeState의 상태에 따라 엑티비티에 보여줄 프래그먼트 표시(월간, 주간)
-
+```
 
 ```
 - 월간 fragment
