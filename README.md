@@ -8,6 +8,12 @@
 
   - 급하게 출시한 어플이라 현재 UI와 몇몇 기능들이 부족합니다. (대체 휴일 계산, api 24 이상부터 icu 캘린더 사용, notification 등등)
 
+  - 화면 구성은 메인 Activity안에 월간 달력 fragment, 주간 달력 fragment가 포함되어 있습니다. 월간 달력 frament 안에는 검색 image를 통해 
+    결과를 보여주는 dialogframent와 viewpager안에 월별 fragment들이 존재합니다. 각각의 월별 fragment의 일자는 클릭 시 dialogframent를 띄우고 
+    dialogframent에도 viewpager를 달아 일자마다 이동이 가능하며 일정은 recyclerview를 사용해 보여줍니다. 
+    일정 클릭 시 일정 선택 Activity로 이동합니다. 주간 달력 fragment안에는 월별과 같이 viewpager를 이용해 여러 fragment들을 보여줍니다. 
+    일정 클릭 시 일정 선택 Activity로 이동합니다. 
+
   - 음력에 경우 라이브러리를 사용한 것이 아니고(icu 중국 캘린더) 직접 구한 일수들을 2017~2033년까지 배열에 저장하고
     현재 날짜에서 2017년 1월 1일과의 일수 차이를 토대로 음력 배열의 값을 가져와 표시하는 방법을 사용하였습니다. 
     이 경우 2017년 이전과 2033년 이후의 음력을 알수 없지만.. license표기와 큰 용량(6mb이상) 때문에 사용하지 않았습니다. 
